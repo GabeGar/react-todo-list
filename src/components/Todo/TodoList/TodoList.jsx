@@ -7,6 +7,7 @@ const TodoList = (props) => {
             <TodoItem
                 todoInfo={todo}
                 key={todo.id}
+                onEdit={props.editTodo}
                 onDelete={props.removeTodo}
             ></TodoItem>
         );

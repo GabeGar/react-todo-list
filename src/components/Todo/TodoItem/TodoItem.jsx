@@ -85,7 +85,7 @@ const TodoItem = (props) => {
                     </select>
                 </span>
             )}
-            {isEditing && (
+            {isEditing && description && (
                 <Button
                     onClick={updateEditingHandler}
                     className={styles["edit-button"]}

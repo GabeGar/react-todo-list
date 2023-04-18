@@ -9,6 +9,7 @@ Create a todo project with some minimal functionality, in the react framework.
 1. Learning and utilizing the vite build tool, for the first time, over webpack.
 2. Basic React fundamentals (state management, creating re-useable components; to name some).
 3. Conditional, In-line, editing.
+4. Utilizing React Fragments, to avoid <div> soup.
 
 ## Thoughts
 

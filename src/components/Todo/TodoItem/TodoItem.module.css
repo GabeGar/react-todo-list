@@ -18,3 +18,7 @@
     align-items: center;
     gap: 0.5rem;
 }
+
+.strike-through {
+    text-decoration: line-through;
+}

@@ -14,6 +14,14 @@ const App = () => {
         });
     };
 
+    const removeTodoHandler = (todoID) => {
+        setTodos((prevTodos) => {
+            return prevTodos.filter((todo) => {
+                return todo.id !== todoID;
+            });
+        });
+    };
+
     return (
         <>
             <h1 className={styles.header}>TODO LIST</h1>
@@ -21,7 +29,7 @@ const App = () => {
             <TodoInput onAddTodo={addTodoHandler} />
 
             <Title>Your Todos</Title>
-            <TodoList todoList={todos} />
+            <TodoList todoList={todos} removeTodo={removeTodoHandler} />
         </>
     );
 };

@@ -1,9 +1,10 @@
 .indicator {
     height: 2rem;
-    width: auto;
+    width: 2rem;
     padding: 0.25rem;
     display: flex;
     align-items: center;
+    border-radius: 5px;
 }
 
 .red {

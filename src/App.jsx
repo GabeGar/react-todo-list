@@ -1,23 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import TodoInput from "./components/Todo/TodoForm/TodoInput";
 import Title from "./components/UI/Title/Title";
-import Indicator from "./components/UI/Indicator/Indicator";
+import TodoList from "./components/Todo/TodoList/TodoList";
 
 import styles from "./App.module.css";
 
 const App = () => {
+    const [todos, setTodos] = useState([]);
+
+    const addTodoHandler = (newTodo) => {
+        setTodos((prevTodos) => {
+            return [newTodo, ...prevTodos];
+        });
+    };
+
     return (
         <>
             <h1 className={styles.header}>TODO LIST</h1>
             <Title>Todo Input</Title>
-            <TodoInput />
+            <TodoInput onAddTodo={addTodoHandler} />
 
-            <Title>Priority Indicators</Title>
-            <section className={styles.section}>
-                <Indicator color="red" />
-                <Indicator color="yellow" />
-                <Indicator color="green" />
-            </section>
+            <Title>Your Todos</Title>
+            <TodoList todoList={todos} />
         </>
     );
 };

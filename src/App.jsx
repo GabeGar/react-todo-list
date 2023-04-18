@@ -24,10 +24,16 @@ const App = () => {
 
     const editTodoHandler = (editedTodo) => {
         setTodos((prevTodos) => {
-            return [
-                editedTodo,
-                ...prevTodos.filter((todo) => todo.id !== editedTodo.id),
-            ];
+            const indexOfOldTodo = prevTodos.findIndex(
+                (todo) => todo.id === editedTodo.id
+            );
+            const firstHalf = prevTodos.slice(0, indexOfOldTodo);
+            const secondHalf = prevTodos.slice(indexOfOldTodo + 1);
+            return [...firstHalf, editedTodo, ...secondHalf];
+            // return [
+            //     editedTodo,
+            //     ...prevTodos.filter((todo) => todo.id !== editedTodo.id),
+            // ];
         });
     };
 

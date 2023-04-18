@@ -5,12 +5,12 @@ import styles from "./TodoItem.module.css";
 import { useState } from "react";
 
 const TodoItem = (props) => {
+    const [isChecked, setIsChecked] = useState(false);
+
     const info = props.todoInfo.description;
     const color = PRIORITY[props.todoInfo.priority].color;
     const colorPriority = PRIORITY[props.todoInfo.priority].priority;
     const todoID = props.todoInfo.id;
-
-    const [isChecked, setIsChecked] = useState(false);
 
     const changedCheckStatusHandler = () => {
         setIsChecked(isChecked ? false : true);
@@ -29,7 +29,7 @@ const TodoItem = (props) => {
                         onChange={changedCheckStatusHandler}
                     />
                 </span>
-                <span>✏️</span>
+                <span onClick={null}>✏️</span>
                 <span onClick={() => props.onDelete(todoID)}>🗑️</span>
                 <IndicatorBox color={color}>{colorPriority}</IndicatorBox>
             </div>

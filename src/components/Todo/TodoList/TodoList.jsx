@@ -16,7 +16,6 @@ const TodoList = (props) => {
         <ul className={styles.list}>
             {todoContent.length === 0 && (
                 <div className={styles.temp}>
-                    {" "}
                     {"--->"} You have no todos 😟. Add some! {"<---"}
                 </div>
             )}

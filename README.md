@@ -17,4 +17,4 @@ I had tried this project in vanilla JS, quite some time ago. Noticing how diffic
 I trudged forth and saved this project, for when I got around learning React. Couldn't believe how much simpler it was to create this project utilizing the framework.
 
 Overall, I found it fun and fairly challenging. Still getting to grips with the fundamentals of Reacts
-but absolutely loving th of programming in React.
+but absolutely loving programming with it.

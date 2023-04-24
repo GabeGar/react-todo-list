@@ -23,11 +23,6 @@
     text-decoration: line-through;
 }
 
-.editing {
-    display: flex;
-    justify-content: space-between;
-}
-
 .edit-button {
     flex: 0 1 30%;
 }

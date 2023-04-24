@@ -8,7 +8,7 @@ import styles from "./TodoItem.module.css";
 const TodoItem = (props) => {
     const info = props.todoInfo.description;
     const color = PRIORITY[props.todoInfo.priority].color;
-    const colorPriority = PRIORITY[props.todoInfo.priority].priority;
+    const priorityText = PRIORITY[props.todoInfo.priority].priorityText;
     const todoID = props.todoInfo.id;
 
     const [description, setDescription] = useState(info);
@@ -72,7 +72,7 @@ const TodoItem = (props) => {
                     </span>
                     <span onClick={updateEditingHandler}>✏️</span>
                     <span onClick={() => props.onDelete(todoID)}>🗑️</span>
-                    <IndicatorBox color={color}>{colorPriority}</IndicatorBox>
+                    <IndicatorBox color={color}>{priorityText}</IndicatorBox>
                 </div>
             )}
             {isEditing && (
